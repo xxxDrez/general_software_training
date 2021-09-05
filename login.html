@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <title>Application</title>
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <link rel="stylesheet" href="assets/css/main.css">
+        <meta charset="utf-8">
+        <script src="assets/js/index.js"></script>
+    </head>
+    <body>
+        <div class="form__body">
+            <p class="body__title">Sign In</p>
+            <input placeholder="Login..." class="body__input"></input>
+            <input placeholder="Password..." type="password" class="body__input"></input>
+            <a href="#" class="body__button" onclick="onAuthorization()">Accept</a>
+        </div>
+        <div class="notify" style="display: none;">
+            <p class="notify__title">Error</p>
+            <p class="notify__message">text text text</p>
+        </div>
+    </body>
+    <script type="text/javascript">
+        if(localStorage.getItem('session') == 1){
+            sendRedirect('dashboard.html',1)
+        }
+    </script>
+</html>
