@@ -1,16 +1,18 @@
 <html>
 
 <head>
-    <title>Application</title>
+    <title>ToDo List | Dashboard</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="stylesheet" href="assets/css/main.css">
     <meta charset="utf-8">
-    <script src="assets/js/index.js"></script>
 </head>
 
 <body>
     <div class="dashboard__inner">
-        <p class="inner__title">Todo List Application</p>
+        <div class="higher__section">
+            <p class="title">Todo List Application</p>
+            <div class="logout" onclick="support.logout();">Logout</div>
+        </div>
         <div class="inner__body">
             <p class="body__hey">Welcome, {username} here are your tasks</p>
             <div class="body__container">
@@ -24,11 +26,10 @@
                     </select>
                 </div>
                 <div class="container__list">
-
                 </div>
                 <div class="container__controls">
                     <select class="controls__status" id="theme__picker" oninput="updateTheme(this.value);">
-                        <option selected value="0">Blue</option>
+                        <option selected value="0">Dark</option>
                         <option value="1">Red</option>
                         <option value="2">Yellow</option>
                     </select>
@@ -36,9 +37,7 @@
             </div>
         </div>
     </div>
-    <div class="dashboard__add" onclick="showDialog(0);">
-        +
-    </div>
+    <div class="dashboard__add" onclick="showDialog(0);"><p>+</p></div>
     <div class="dashboard__dialog__inner">
         <div class="dashboard__dialog">
             <p class="dashboard__dialog__title" id="dd__title">dialog title</p>
@@ -63,7 +62,13 @@
             </div>
         </div>
     </div>
+    <div class="notify" style="display: none;">
+        <p class="notify__title"></p>
+        <p class="notify__message"></p>
+    </div>
 </body>
+<script src="assets/js/Database.js"></script>
+<script src="assets/js/support.js"></script>
+<script src="assets/js/globalVariables.js"></script>
 <script src="assets/js/dashboard.js"></script>
-
 </html>

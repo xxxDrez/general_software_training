@@ -1,26 +1,28 @@
 <html>
     <head>
-        <title>Application</title>
+        <title>ToDo List | Login</title>
         <meta name="viewport" content="width=device-width,initial-scale=1">
         <link rel="stylesheet" href="assets/css/main.css">
         <meta charset="utf-8">
-        <script src="assets/js/index.js"></script>
     </head>
     <body>
         <div class="form__body">
             <p class="body__title">Sign In</p>
-            <input placeholder="Login..." class="body__input"></input>
-            <input placeholder="Password..." type="password" class="body__input"></input>
-            <a href="#" class="body__button" onclick="onAuthorization()">Accept</a>
+            <input placeholder="Login..." class="body__input" id="login"></input>
+            <input placeholder="Password..." type="password" class="body__input" id="password"></input>
+            <div class="body__button" onclick="onAuthorization()">Accept</div>
+        </div>
+        <div class="create">
+            <p>Don't have an account? Try to <a href="./reg.html">Sign-up!</a></p>
         </div>
         <div class="notify" style="display: none;">
-            <p class="notify__title">Error</p>
-            <p class="notify__message">text text text</p>
+            <p class="notify__title"></p>
+            <p class="notify__message"></p>
         </div>
     </body>
-    <script type="text/javascript">
-        if(localStorage.getItem('session') == 1){
-            sendRedirect('dashboard.html',1)
-        }
-    </script>
+    <script src="assets/js/Database.js"></script>
+    <script src="assets/js/support.js"></script>
+    <script src="assets/js/user_forms.js"></script>
+    <script src="assets/js/auth.js"></script>
+    <script src="assets/js/events.js"></script>
 </html>
