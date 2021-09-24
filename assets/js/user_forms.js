@@ -6,6 +6,7 @@ const lowerCaseLatters = /[a-z]/g;
 const upperCaseLatters = /[A-Z]/g;
 const numbers = /[0-9]/g;
 const validate_email = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+const database = new Database();
 
 let user_login = {
     "login": '',
@@ -16,6 +17,9 @@ let user_login = {
         }
         else if(validate_email.test(this.email) == false && this.email != null){
             return 'Incorrect email address';
+        }
+        else if(database.onLoginIsBusy(this.login) == true && this.email != null){
+            return 'This login is taken';
         }
         else if(lowerCaseLatters.test(this.password) == false){
             return 'There is no lower case in the password';

@@ -19,6 +19,15 @@ var support = (function(){
             }
             catch {}
         },
+        onUpdateTasks: function(){
+            let task = new Tasks(support.taskContainerZeroing(),getUserID());
+            task.onLoadUserTasks();
+        },
+        taskContainerZeroing: function(){
+            let tasksContainer = document.getElementsByClassName('container__list')[0];
+            tasksContainer.innerHTML = '';
+            return tasksContainer;
+        },
         sendNotify: function(title,message,type){
             document.getElementsByClassName('notify')[0].style.display = "flex";
             document.getElementsByClassName('notify__title')[0].innerHTML = title;

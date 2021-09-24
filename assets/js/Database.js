@@ -34,6 +34,15 @@ class Database {
         return { success: false, id: -1 };
     }
 
+    onLoginIsBusy(login){
+        for(let i = 0; i < this.database.length; i++){
+            if(this.database[i].login == login){
+                return true;
+            }
+        }
+        return false;
+    }
+
     onSetUserTheme(themeid){
         this.database[this.user_id].theme = themeid;
         this.onSaveDatabase();
