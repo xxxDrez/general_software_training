@@ -24,7 +24,6 @@ const callBackDashBoard = () => {
             task.onLoadUserTasks();
         }
     } catch(e){
-        //console.log(e);
         support.sendRedirect('login.html', 0);
     }
 }
