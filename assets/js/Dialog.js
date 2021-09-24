@@ -1,5 +1,5 @@
 /**
- * 
+ * This is class Dialog, here are the basic methods system dialog.
  */
 
 class Dialog{
