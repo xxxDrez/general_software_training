@@ -1,3 +1,6 @@
+/**
+ * This is class Tasks, here are the basic methods
+ */
 class Tasks extends Dialog{
     constructor(tasksContainer,user_id){
         super(tasksContainer,user_id);
