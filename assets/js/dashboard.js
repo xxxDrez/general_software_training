@@ -30,16 +30,14 @@ const callBackDashBoard = () => {
 callBackDashBoard();
 
 const updateSearch = (value) => {
-    searchString = value;
-    updateTasksBySearch();
+    updateTasksBySearch(-1,value);
 }
 
 const updateStatus = (value) => {
-    searchStatus = value;
-    updateTasksBySearch();
+    updateTasksBySearch(value);
 }
 
-const updateTasksBySearch = () => {
+const updateTasksBySearch = (searchStatus = -1,searchString = '') => {
     task.onSetTasksContainer(support.taskContainerZeroing());
     let count = 0;
     if (task.onGetTaskLenght() != 0) {

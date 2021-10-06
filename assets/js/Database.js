@@ -2,7 +2,7 @@
  * This is a database class, for accessing and performing various operations on the database
  */
 
-class Database {
+ class Database {
     
     constructor(user_id){
         this.user_id = user_id;

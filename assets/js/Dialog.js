@@ -2,7 +2,7 @@
  * This is class Dialog, here are the basic methods system dialog.
  */
 
-class Dialog{
+ class Dialog{
     constructor(){
         this.dialogInner = document.getElementsByClassName('dashboard__dialog__inner')[0];
         this.dialogTitle = document.getElementById("dd__title");

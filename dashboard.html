@@ -19,11 +19,13 @@
                 <div class="container__controls">
                     <input class="controls__search" type="text" placeholder="Search.."
                         oninput="updateSearch(this.value);">
-                    <select class="controls__status" oninput="updateStatus(this.value);">
-                        <option selected value="-1">Status</option>
-                        <option value="0">Done</option>
-                        <option value="1">Not done</option>
-                    </select>
+                    <div class="dropdown">
+                        <div class="dropdown__main" onclick="updateStatus(-1);">Status <div class="dropdown__icon"></div></div>
+                        <div class="dropdown__list">
+                            <div id="0" class="list__item" onclick="updateStatus(0);">Done</div>
+                            <div id="1" class="list__item" onclick="updateStatus(1);">Not done</div>
+                        </div>
+                    </div>
                 </div>
                 <div class="container__list">
                 </div>
@@ -67,6 +69,7 @@
         <p class="notify__message"></p>
     </div>
 </body>
+<script src="assets/js/events.js"></script>
 <script src="assets/js/Database.js"></script>
 <script src="assets/js/support.js"></script>
 <script src="assets/js/Dialog.js"></script>

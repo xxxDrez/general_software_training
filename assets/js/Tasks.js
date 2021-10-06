@@ -1,7 +1,7 @@
 /**
  * This is class Tasks, here are the basic methods
  */
-class Tasks extends Dialog{
+ class Tasks extends Dialog{
     constructor(tasksContainer,user_id){
         super(tasksContainer,user_id);
         if(typeof Tasks.instance === "object"){

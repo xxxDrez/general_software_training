@@ -1,7 +1,7 @@
 /**
  * This is module support, here are the basic methods for solving the problems
  */
-var support = (function(){
+ var support = (function(){
     const getUserID = () => {
         return localStorage.getItem('user_id');
     };
