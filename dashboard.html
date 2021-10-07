@@ -20,21 +20,23 @@
                     <input class="controls__search" type="text" placeholder="Search.."
                         oninput="updateSearch(this.value);">
                     <div class="dropdown">
-                        <div class="dropdown__main" onclick="updateStatus(-1);">Status <div class="dropdown__icon"></div></div>
+                        <div class="dropdown__main list__item" id="-1" onclick="updateStatus(this.id); eventDropDown(this,0);">Status</div>
                         <div class="dropdown__list">
-                            <div id="0" class="list__item" onclick="updateStatus(0);">Done</div>
-                            <div id="1" class="list__item" onclick="updateStatus(1);">Not done</div>
+                            <div id="0" class="list__item" onclick="updateStatus(this.id); eventDropDown(this,0);">Done</div>
+                            <div id="1" class="list__item" onclick="updateStatus(this.id); eventDropDown(this,0);">Not done</div>
                         </div>
                     </div>
                 </div>
                 <div class="container__list">
                 </div>
                 <div class="container__controls">
-                    <select class="controls__status" id="theme__picker" oninput="updateTheme(this.value);">
-                        <option selected value="0">Dark</option>
-                        <option value="1">Red</option>
-                        <option value="2">Yellow</option>
-                    </select>
+                    <div class="dropdown">
+                        <div class="dropdown__main list__item" id="0" onclick="updateTheme(this.id); eventDropDown(this,1);">Dark</div>
+                        <div class="dropdown__list">
+                            <div id="1" class="list__item" onclick="updateTheme(this.id); eventDropDown(this,1);">Red</div>
+                            <div id="2" class="list__item" onclick="updateTheme(this.id); eventDropDown(this,1);">Yellow</div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

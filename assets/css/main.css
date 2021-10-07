@@ -247,6 +247,18 @@ html,body{
     top: -1px;
 }
 
+
+.dropdown__main::after{
+    content: "";
+    width: 5px;
+	height: 5px;
+	border: 1px solid #949ba7;
+	border-width: 2px 0 0 2px;
+	transform: rotate(225deg);
+    position: relative;
+    top: -1px;
+}
+
 .dropdown__main{
     display: flex;
     align-items: center;
@@ -264,8 +276,10 @@ html,body{
     font-weight: 500;
 }
 
+
 .dropdown__main:hover{
     background: #f3f3f3;
+    color: #b2b7bf;
 }
 
 .dropdown:hover .dropdown__list{
@@ -277,7 +291,7 @@ html,body{
 .dropdown__list{
     display: none;
     color: #949ba7;
-    height: 40p;
+    height: auto;
     width: auto;
     background: #e6e6e6;
     border: 2px solid #949ba7;

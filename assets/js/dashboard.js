@@ -9,7 +9,7 @@ const updateTheme = (themeid) => {
         document.documentElement.style.setProperty('--theme-color', 'yellow');
     }
     database.onSetUserTheme(themeid);
-    document.getElementById("theme__picker").value = themeid;
+    document.getElementsByClassName("dropdown__main").id = themeid;
 }
 
 const callBackDashBoard = () => {
@@ -19,12 +19,13 @@ const callBackDashBoard = () => {
         } else {
             document.getElementsByClassName('body__hey')[0].innerHTML = `Welcome, ${database.onGetUserLogin()} here are your tasks`;
             updateTheme(database.onGetUserTheme());
+            eventDropDown(document.getElementsByClassName('container__controls')[1].getElementsByClassName('list__item')[database.onGetUserTheme()],1);
             dialog = new Dialog();
             dialog.destroyDialog();
             task.onLoadUserTasks();
         }
     } catch(e){
-        support.sendRedirect('login.html', 0);
+        support.sendRedirect('./login.html',0);
     }
 }
 callBackDashBoard();
